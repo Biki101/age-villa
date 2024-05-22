@@ -1,10 +1,11 @@
 <div class="h-[100vh]">
   <div class="h-[calc(100%-140px)] relative">
     <div
-      class="flex absolute z-[1] top-0 left-0 h-[100%] w-full justify-between items-center px-[100px]"
+      class="flex absolute z-[10] top-0 left-0 h-[100%] w-full justify-between items-center px-[100px]"
     >
       <div
-        class="bg-black p-[8px] flex items-center justify-center w-[30px] h-[30px] rounded-full"
+        class="bg-black p-[8px] flex items-center justify-center w-[30px] h-[30px] rounded-full cursor-pointer"
+        (click)="changeImage()"
       >
         <svg
           class="w-[20px]"
@@ -19,7 +20,8 @@
         </svg>
       </div>
       <div
-        class="bg-black p-[8px] flex items-center justify-center w-[30px] h-[30px] rounded-full"
+        class="bg-black p-[8px] flex items-center justify-center w-[30px] h-[30px] rounded-full cursor-pointer"
+        (click)="changeImage()"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -35,20 +37,72 @@
     >
       <div class="ml-[300px]">
         <div
+          *ngIf="currentIndex == 0"
           class="bg-white text-[18px] text-[black] px-[20px] py-[5px] w-[170px]"
         >
           Tronto, <span class="text-orange-600">Canada</span>
         </div>
-        <div>
+        <div
+          *ngIf="currentIndex == 1"
+          class="bg-white text-[18px] text-[black] px-[20px] py-[5px] w-[190px]"
+        >
+          Miami, <span class="text-orange-600">Florida</span>
+        </div>
+        <div
+          *ngIf="currentIndex == 2"
+          class="bg-white text-[18px] text-[black] px-[20px] py-[5px] w-[250px]"
+        >
+          Melbourne, <span class="text-orange-600">Australia</span>
+        </div>
+        <div *ngIf="currentIndex == 0">
           HURRY! <br />
           GET THE BEST <br />
           VILLA FOR YOU <br />
         </div>
+        <div *ngIf="currentIndex == 1">
+          BE QUICK! <br />
+          GET THE BEST <br />
+          VILLA IN TOWN <br />
+        </div>
+        <div *ngIf="currentIndex == 2">
+          ACT NOW! <br />
+          GET THE HIGHEST <br />
+          LEVEL PENTHOUSE <br />
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-[100px] z-[50] left-0 text-white w-full">
+      <div class="flex justify-center gap-[10px]">
+        <div
+          class="w-[10px] h-[10px] rounded-full"
+          [ngClass]="currentIndex == 0 ? 'bg-orange-600' : 'bg-white'"
+        ></div>
+        <div
+          class="w-[10px] h-[10px] rounded-full"
+          [ngClass]="currentIndex == 1 ? 'bg-orange-600' : 'bg-white'"
+        ></div>
+        <div
+          class="w-[10px] h-[10px] rounded-full"
+          [ngClass]="currentIndex == 2 ? 'bg-orange-600' : 'bg-white'"
+        ></div>
       </div>
     </div>
     <img
-      class="w-full h-full"
-      src="https://pixabay.com/get/g9d10ae70049579dd73fea6904621a845a24baf3e99dbd3f58703f7b81f3c10f0d7f02dbf9339477ab290a8213fbc5ae577c30ac42f5a3539f163138dffa8621e_1920.jpg"
+      *ngIf="currentIndex == 0"
+      class="w-full h-full slide-left"
+      [src]="images[0].imageUrl"
+      alt="hero image"
+    />
+    <img
+      *ngIf="currentIndex == 1"
+      class="w-full h-full slide-left"
+      [src]="images[1].imageUrl"
+      alt="hero image"
+    />
+    <img
+      *ngIf="currentIndex == 2"
+      class="w-full h-full slide-left"
+      [src]="images[2].imageUrl"
       alt="hero image"
     />
   </div>
