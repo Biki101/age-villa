@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { herSectionAssets } from '../../../utils';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,9 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero-section.component.scss',
 })
 export class HeroSectionComponent {
-  images = herSectionAssets;
-
-  currentImage = this.images[0]?.imageUrl;
   currentIndex = 0;
 
   constructor() {
@@ -24,6 +20,5 @@ export class HeroSectionComponent {
   changeImage() {
     this.currentIndex = Math.floor(Math.random() * 3);
     console.log(this.currentIndex);
-    this.currentImage = this.images[this.currentIndex]?.imageUrl;
   }
 }

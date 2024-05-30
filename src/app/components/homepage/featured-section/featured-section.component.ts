@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './featured-section.component.html',
-  styleUrl: './featured-section.component.scss'
+  styleUrl: './featured-section.component.scss',
 })
 export class FeaturedSectionComponent {
-
+  // featuredImage = featuredImage[0]?.imageUrl;
 }
