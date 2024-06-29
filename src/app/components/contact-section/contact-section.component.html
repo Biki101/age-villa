@@ -1,0 +1,105 @@
+<div style="margin-top: 50px; padding-top: 100px" class="relative">
+  <!-- <img
+      src="../../../assets/achievment_bg.jpg"
+      class="absolute z-[-1] top-0 left-0 h-[50vh] w-full"
+      alt="bg"
+      /> -->
+  <div class="absolute z-[-1] top-0 left-0 h-[50vh] w-full bg-black"></div>
+
+  <div class="flex flex-col items-center justify-center mb-[50px]">
+    <div
+      class="text-[18px] font-bold border-l-[4px] px-[12px] border-orange-600 text-orange-600"
+    >
+      CONTACT US
+    </div>
+    <div class="mt-[20px] text-[30px] font-extrabold text-white text-center">
+      Get In Touch With <br />
+      Our Agents
+    </div>
+  </div>
+
+  <div class="outer-container flex justify-between">
+    <div class="flex flex-col justify-between">
+      <iframe
+        class="w-full h-[600px] rounded-lg shadow-sm shadow-black"
+        title="our-location"
+        id="gmap_canvas"
+        src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Bhaktapur Nepal&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      ></iframe>
+
+      <div class="mt-[30px] flex justify-between gap-[20px]">
+        <div
+          class="flex items-center gap-[20px] shadow-sm shadow-black p-[35px] rounded-md"
+        >
+          <img
+            class="w-[50px] h-[50px]"
+            src="../../../assets/phone-icon.png"
+            alt="phone-icon"
+          />
+          <div>
+            <div class="font-[500] text-[18px]">+977-984566235156</div>
+            <div class="text-gray-500">Phone Number</div>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-[20px] shadow-sm shadow-black p-[35px] rounded-md"
+        >
+          <img class="w-[50px] h-[40px]" src="../../../assets/email-icon.png" />
+          <div>
+            <div class="font-[500] text-[18px]">
+              {{ "info-biki" + "@" + "gmail.co" }}
+            </div>
+            <div class="text-gray-500">Buisness mail</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form
+      class="w-[400px] bg-white rounded-md shadow-sm shadow-black p-[35px] flex flex-col gap-[30px]"
+    >
+      <div>
+        <div class="mb-[15px]">Full Name</div>
+        <input
+          class="bg-gray-100 w-full px-[12px] py-[6px] outline-none rounded-full"
+          type="text"
+          required
+          placeholder="Your Name..."
+        />
+      </div>
+      <div>
+        <div class="mb-[15px]">Email Address</div>
+        <input
+          class="bg-gray-100 w-full px-[12px] py-[6px] outline-none rounded-full"
+          type="email"
+          required
+          placeholder="Your E-mail..."
+        />
+      </div>
+      <div>
+        <div class="mb-[15px]">Subject</div>
+        <input
+          class="bg-gray-100 w-full px-[12px] py-[6px] outline-none rounded-full"
+          type="text"
+          required
+          placeholder="Subject..."
+        />
+      </div>
+      <div>
+        <div class="mb-[15px]">Message</div>
+        <textarea
+          placeholder="Message..."
+          required
+          class="bg-gray-100 w-full px-[12px] py-[6px] outline-none rounded-xl"
+          rows="6"
+        ></textarea>
+      </div>
+      <button
+        class="px-[12px] py-[6px] bg-black text-white rounded-full text-center"
+        type="submit"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { AchievementSectionComponent } from './components/achievement-section/achievement-section.component';
 import { BestDealsComponent } from './components/best-deals/best-deals.component';
 import { PropertiesSectionComponent } from './components/properties-section/properties-section.component';
+import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { PropertiesSectionComponent } from './components/properties-section/prop
     AchievementSectionComponent,
     BestDealsComponent,
     PropertiesSectionComponent,
+    ContactSectionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
