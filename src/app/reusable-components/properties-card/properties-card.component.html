@@ -1,0 +1,43 @@
+<div
+  class="w-[350px] flex flex-col bg-[#fafafa] p-[30px] rounded-lg gap-[20px]"
+>
+  <img [src]="image" class="rounded-lg h-[220px]" alt="card-image" />
+  <div class="flex justify-between items-center">
+    <div class="bg-yellow-300 px-[12px] py-[5px] rounded-md font-[500]">
+      {{ type }}
+    </div>
+    <div class="font-[700] text-orange-600 text-[20px]">
+      Rs {{ price.toFixed(2) }}
+    </div>
+  </div>
+  <div class="font-[700] text-[20px] self-center">{{ address }}</div>
+  <div class="flex flex-col gap-[10px]">
+    <div class="flex justify-start items-center gap-[20px]">
+      <div>
+        Bedrooms:
+        <span class="font-semibold">{{ bedrooms }}</span>
+      </div>
+      <div>
+        Bathrooms: <span class="font-semibold">{{ bathrooms }}</span>
+      </div>
+    </div>
+    <div class="flex justify-start items-center gap-[20px]">
+      <div>
+        Area: <span class="font-semibold">{{ area + " " }}</span
+        ><span class="font-semibold">m</span> <sup class="font-semibold">2</sup>
+      </div>
+      <div>
+        Floor: <span class="font-semibold">{{ floor }}</span>
+      </div>
+    </div>
+    <div>
+      Parking: <span class="font-semibold">{{ parking + " " }}</span>
+      <span class="font-semibold">spots</span>
+    </div>
+  </div>
+  <div
+    class="self-center flex items-center justify-center py-[5px] pr-[20px] gap-[10px] bg-black rounded-full border-[2px] border-black w-[200px]"
+  >
+    <div class="text-[white] font-[500]">Schedule a visit</div>
+  </div>
+</div>

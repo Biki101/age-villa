@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { AchievementSectionComponent } from './components/achievement-section/achievement-section.component';
 import { BestDealsComponent } from './components/best-deals/best-deals.component';
+import { PropertiesSectionComponent } from './components/properties-section/properties-section.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { BestDealsComponent } from './components/best-deals/best-deals.component
     HomepageComponent,
     AchievementSectionComponent,
     BestDealsComponent,
+    PropertiesSectionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
