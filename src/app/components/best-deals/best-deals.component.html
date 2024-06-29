@@ -11,13 +11,34 @@
         Right Now!
       </div>
       <div class="font-semibold flex gap-[30px]">
-        <div class="text-white bg-orange-600 px-[18px] py-[12px] rounded-lg">
+        <div
+          class="cursor-pointer text-white px-[18px] py-[12px] rounded-lg"
+          [ngClass]="{
+            'bg-orange-600': activeTab == 0,
+            'bg-black': activeTab != 0
+          }"
+          (click)="activeTab = 0"
+        >
           Apartment
         </div>
-        <div class="text-white bg-black px-[18px] py-[12px] rounded-lg">
+        <div
+          class="cursor-pointer text-white bg-black px-[18px] py-[12px] rounded-lg"
+          [ngClass]="{
+            'bg-orange-600': activeTab == 1,
+            'bg-black': activeTab != 1
+          }"
+          (click)="activeTab = 1"
+        >
           Villa House
         </div>
-        <div class="text-white bg-black px-[18px] py-[12px] rounded-lg">
+        <div
+          class="cursor-pointer text-white bg-black px-[18px] py-[12px] rounded-lg"
+          [ngClass]="{
+            'bg-orange-600': activeTab == 2,
+            'bg-black': activeTab != 2
+          }"
+          (click)="activeTab = 2"
+        >
           Penthouse
         </div>
       </div>
@@ -31,40 +52,55 @@
           class="px-[18px] py-[12px] flex justify-between items-center font-semibold"
         >
           <div class="text-gray-500">Total Flat Space</div>
-          <div class="text-[20px] font-bold">185 m<sup>2</sup></div>
+          <div class="text-[20px] font-bold">
+            {{ details[activeTab].space }} m<sup>2</sup>
+          </div>
         </div>
         <hr />
         <div
           class="px-[18px] py-[12px] flex justify-between items-center font-semibold"
         >
           <div class="text-gray-500">Floor Number</div>
-          <div class="text-[20px] font-bold">26th</div>
+          <div class="text-[20px] font-bold">
+            {{ details[activeTab].floor }}
+          </div>
         </div>
         <hr />
         <div
           class="px-[18px] py-[12px] flex justify-between items-center font-semibold"
         >
           <div class="text-gray-500">Number of rooms</div>
-          <div class="text-[20px] font-bold">4</div>
+          <div class="text-[20px] font-bold">
+            {{ details[activeTab].rooms }}
+          </div>
         </div>
         <hr />
         <div
           class="px-[18px] py-[12px] flex justify-between items-center font-semibold"
         >
           <div class="text-gray-500">Parking Available</div>
-          <div class="text-[20px] font-bold">Yes</div>
+          <div class="text-[20px] font-bold">
+            {{ details[activeTab].parking }}
+          </div>
         </div>
         <hr />
         <div
           class="px-[18px] py-[12px] flex justify-between items-center font-semibold"
         >
           <div class="text-gray-500">Payment Process</div>
-          <div class="text-[20px] font-bold">Bank</div>
+          <div class="text-[20px] font-bold">
+            {{ details[activeTab].payment }}
+          </div>
         </div>
       </div>
-      <img src="../../../assets/best-deal1.jpg" class="w-[40%]" alt="" />
+      <img [src]="details[activeTab].image" class="w-[40%]" alt="" />
       <div class="w-[30%] flex flex-col gap-[20px]">
-        <div class="font-bold text-[20px]">Extra Info About Property</div>
+        <div class="font-bold text-[20px]">
+          Extra Info About
+          {{
+            activeTab == 0 ? "Property" : activeTab == 1 ? "Villa" : "Penthouse"
+          }}
+        </div>
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
           voluptates minus alias in enim esse nostrum dicta magni, laudantium
