@@ -87,10 +87,10 @@
   >
     <div class="text-[28px] font-bold">AGEVILLA</div>
     <div class="flex items-center gap-[30px] font-semibold text-gray-600">
-      <div>Home</div>
-      <div>Properties</div>
-      <div>Property Details</div>
-      <div>Contact Us</div>
+      <div (click)="goToHome()" class="cursor-pointer">Home</div>
+      <div (click)="goToProperties()" class="cursor-pointer">Properties</div>
+      <div (click)="goToDetails()" class="cursor-pointer">Property Details</div>
+      <div (click)="goToContact()" class="cursor-pointer">Contact Us</div>
       <div
         class="flex items-center pr-[20px] gap-[10px] bg-black rounded-full border-[2px] border-black"
       >
