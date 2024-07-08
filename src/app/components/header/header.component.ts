@@ -24,7 +24,7 @@ export class HeaderComponent {
     this.router.navigate(['/properties']);
   }
   goToDetails() {
-    this.router.navigate(['/details']);
+    this.router.navigate(['/properties-details']);
   }
   goToContact() {
     this.router.navigate(['/contact']);
