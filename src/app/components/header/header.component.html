@@ -1,7 +1,9 @@
 <!-- -------Top Header ------ -->
 
 <div class="w-full border-b-[1px] border-gray-200">
-  <div class="flex justify-between outer-container">
+  <div
+    class="flex flex-col xl:flex-row gap-[12px] justify-between outer-container"
+  >
     <div class="flex gap-[20px]">
       <div
         class="flex gap-[10px] items-center pr-[20px] border-r-[1px] border-gray-200"
@@ -86,7 +88,9 @@
     style="padding: 25px"
   >
     <div class="text-[28px] font-bold">AGEVILLA</div>
-    <div class="flex items-center gap-[30px] font-semibold text-gray-600">
+    <div
+      class="flex items-center gap-[30px] font-semibold text-gray-600 hidden lg:flex"
+    >
       <div (click)="goToHome()" class="cursor-pointer">Home</div>
       <div (click)="goToProperties()" class="cursor-pointer">Properties</div>
       <div (click)="goToDetails()" class="cursor-pointer">Property Details</div>

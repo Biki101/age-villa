@@ -9,6 +9,13 @@
   padding: 10px;
 }
 
+@media (max-width: 1280px) {
+  .outer-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
 body {
   font-family: "Barlow", sans-serif;
 }

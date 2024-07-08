@@ -5,12 +5,14 @@
     >
       Best Deal
     </div>
-    <div class="mt-[30px] flex justify-between items-center">
+    <div
+      class="mt-[30px] flex flex-col lg:flex-row justify-between items-center"
+    >
       <div class="text-[30px] font-bold">
         Find Tour Best Deal <br />
         Right Now!
       </div>
-      <div class="font-semibold flex gap-[30px]">
+      <div class="font-semibold flex gap-[30px] mt-[20px] lg:mt-[0px]">
         <div
           class="cursor-pointer text-white px-[18px] py-[12px] rounded-lg"
           [ngClass]="{
@@ -44,9 +46,9 @@
       </div>
     </div>
 
-    <div class="flex gap-[30px] mt-[30px]">
+    <div class="flex flex-col lg:flex-row gap-[30px] mt-[30px]">
       <div
-        class="w-[30%] shadow-sm shadow-gray-400 rounded-lg bg-white p-[12px] flex flex-col gap-[10px] h-[378px]"
+        class="w-full lg:w-[30%] mt-[20px] lg:mt-[0px] shadow-sm shadow-gray-400 rounded-lg bg-white p-[12px] flex flex-col gap-[10px] h-[378px]"
       >
         <div
           class="px-[18px] py-[12px] flex justify-between items-center font-semibold"
@@ -93,8 +95,12 @@
           </div>
         </div>
       </div>
-      <img [src]="details[activeTab].image" class="w-[40%]" alt="" />
-      <div class="w-[30%] flex flex-col gap-[20px]">
+      <img
+        [src]="details[activeTab].image"
+        class="mt-[20px] lg:mt-[0px] w-full lg:w-[40%]"
+        alt=""
+      />
+      <div class="w-full lg:w-[30%] flex flex-col gap-[20px]">
         <div class="font-bold text-[20px]">
           Extra Info About
           {{

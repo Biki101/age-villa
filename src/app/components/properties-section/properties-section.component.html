@@ -9,7 +9,9 @@
     Property You Like
   </div>
   <div>
-    <div class="flex gap-[20px] justify-center">
+    <div
+      class="grid gap-[20px] grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center p-[10px] xl:p-0"
+    >
       <app-properties-card
         [image]="'../../../assets/hero1.jpg'"
         [type]="'Luxury Villa'"
@@ -43,8 +45,6 @@
         [floor]="2"
         [parking]="4"
       ></app-properties-card>
-    </div>
-    <div class="flex gap-[20px] justify-center mt-[20px]">
       <app-properties-card
         [image]="'../../../assets/best-deal1.jpg'"
         [type]="'Apartment'"
